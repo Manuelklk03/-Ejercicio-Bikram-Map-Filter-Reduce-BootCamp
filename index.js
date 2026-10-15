@@ -112,3 +112,63 @@ const inventory = [
 const result6 = inventory
   .filter((item) => item.price > 300)
   .map((item) => item.name);
+
+// Ejercicio 7
+const numeros = [39, 2, 4, 25, 62];
+const numeros3 = numeros;
+
+const result7 = numeros3.reduce((total, number) => total * number, 1);
+
+// Ejercicio 8
+const sentenceElements = [
+  "Me",
+  "llamo",
+  "Manuel",
+  "y",
+  "quiero",
+  "sentir",
+  "la",
+  "fuerza",
+  "con",
+  "javascript",
+];
+
+const result8 = sentenceElements.reduce((sentence, word) => {
+  return sentence + " " + word;
+});
+
+// Ejercicio 9
+const books = [
+  {
+    name: " JS for dummies",
+    author: "Emily A. Vander Veer",
+    price: 20,
+    category: "code",
+  },
+  {
+    name: "Don Quijote de la Mancha",
+    author: "Cervantes",
+    price: 14,
+    category: "novel",
+  },
+  {
+    name: "Juego de tronos",
+    author: "George R. Martin",
+    price: 32,
+    category: "Fantasy",
+  },
+  {
+    name: "javascript the good parts",
+    author: "Douglas Crockford",
+    price: 40,
+    category: "code",
+  },
+];
+
+const result9 = books.reduce((total, book) => {
+  if (book.category === "code") {
+    return total + book.price;
+  }
+
+  return total;
+}, 0);
